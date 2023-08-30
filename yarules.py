@@ -16,8 +16,8 @@ rule {rule_name}
 def main():
     parser = argparse.ArgumentParser(description="Generate YARA rule")
     parser.add_argument("--rule-name", required=True, help="Name of the YARA rule")
-    parser.add_argument("--strings", required=True, help="Strings for the YARA rule (use format 'string = \"text\" [wide ascii]')")
     parser.add_argument("--string-count", type=int, required=True, help="Number of strings required to match")
+    parser.add_argument("--strings", required=True, help="Strings for the YARA rule (use format 'string = \"text\" [wide ascii]')")
     parser.add_argument("--condition", choices=["all of them", "any of them", "all of them except"], default="any of them", help="Condition for the YARA rule")
     args = parser.parse_args()
 
